@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require __DIR__.'/app/autoload.php';
+require __DIR__.'/../autoload.php';
 
 $statement = $pdo->query('SELECT * FROM users');
 if(!$statement){
@@ -8,5 +8,3 @@ if(!$statement){
 }
 
 $users = $statement->fetch(PDO::FETCH_ASSOC);
-
-die(var_dump($users));
