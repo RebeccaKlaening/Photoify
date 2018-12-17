@@ -1,4 +1,8 @@
-<?php require __DIR__.'/views/header.php'; ?>
+<?php
+declare(strict_types=1);
+require __DIR__.'/views/header.php';
+require __DIR__.'/views/profile.php';
+?>
 
 
 <article>
@@ -7,35 +11,43 @@
     <form action="app/users/create.php" method="post">
         <div class="form-group">
             <label for="username">Username</label>
-            <input class="form-control" type="text" name="text" placeholder="Username" required>
-            <small class="form-text text-muted">Username</small>
+            <input class="form-control" type="text" name="username" placeholder="Username" required>
         </div><!-- /form-group -->
 
-            <div class="form-group">
-                <label for="name">First name</label>
-                <input class="form-control" type="text" name="text" placeholder="Firstname" required>
-                <small class="form-text text-muted"></small>
-            </div><!-- /form-group -->
+        <div class="form-group">
+            <label for="name">First name</label>
+            <input class="form-control" type="text" name="first_name" placeholder="Firstname" required>
 
-                <div class="form-group">
-                    <label for="name">Last name</label>
-                    <input class="form-control" type="text" name="text" placeholder="Lastname" required>
-                    <small class="form-text text-muted"></small>
-                </div><!-- /form-group -->
+        </div><!-- /form-group -->
+
+        <div class="form-group">
+            <label for="name">Last name</label>
+            <input class="form-control" type="text" name="last_name" placeholder="Lastname" required>
+
+        </div><!-- /form-group -->
 
         <div class="form-group">
             <label for="email">Email</label>
             <input class="form-control" type="email" name="email" placeholder="email@.com" required>
-            <small class="form-text text-muted">Please provide your email address.</small>
+
         </div><!-- /form-group -->
 
         <div class="form-group">
             <label for="password">Password</label>
             <input class="form-control" type="password" name="password" required>
-            <small class="form-text text-muted">Please provide your password (passphrase).</small>
+            <small class="form-text text-muted"></small>
         </div><!-- /form-group -->
 
+        <form action="profile" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="image">Please upload your profile pic</label>
+                <input type="file" name="image" id="image" accept=".jpg, png" required>
+            </div>
+
+            <button type="submit">Upload</button>
+        </form>
         <button type="submit" class="btn btn-primary">Create Account</button>
+
     </form>
 </article>
 

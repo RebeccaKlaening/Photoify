@@ -19,7 +19,7 @@ if(isset($_POST['email'], $_POST['password'], $_POST['username'], $_POST['first_
 
     $statement->bindParam(':email', $email, PDO::PARAM_STR);
     $statement->bindParam(':password', $password, PDO::PARAM_STR);
-    $statement->bindParam(':username', $username, PDO::PARAM_STR);
+    $statement->bindParam(':username', $userName, PDO::PARAM_STR);
     $statement->bindParam(':first_name', $firstName, PDO::PARAM_STR);
     $statement->bindParam(':last_name', $lastName, PDO::PARAM_STR);
 
