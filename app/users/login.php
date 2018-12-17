@@ -2,9 +2,35 @@
 declare(strict_types=1);
 require __DIR__.'/../autoload.php';
 
-$statement = $pdo->query('SELECT * FROM users');
-if(!$statement){
-    die(var_dump($pdo->errorInfo()));
+if (isset($_POST['email'], $_POST['password'])) {
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    // Prepare, bind email parameter and execute the database query.
+    $statement = $pdo->prepare('SELECT * FROM users WHERE email = :email');
+    $statement->bindParam(':email', $email, PDO::PARAM_STR);
+    $statement->execute();
+    // Fetch the user as an associative array.
+    $user = $statement->fetch(PDO::FETCH_ASSOC);
+
+if (!$user) {
+    $_SESSION['message'][] = "User with that email does not exist!";
+    redirect('/');
+}
+// If we found the user in the database, compare the given password from the
+// request with the one in the database using the password_verify function.
+if (password_verify($_POST['password'], $user['password'])) {
+    // If the password was valid we know that the user exists and provided
+    // the correct password. We can now save the user in our session.
+    // Remember to not save the password in the session!
+    unset($user['password']);
+    $_SESSION['user'] = $user;
+
+    $_SESSION['message'][] = "Logged in ok!";
+
+} else {
+    $_SESSION['message'][] = "Wrong password!";
+}
 }
 
-$users = $statement->fetch(PDO::FETCH_ASSOC);
+// We should put this redirect in the end of this file since we always want to
+// redirect the user back from this file. We don't know
+redirect('/');
