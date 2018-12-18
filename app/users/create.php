@@ -4,11 +4,11 @@ require __DIR__.'/../autoload.php';
 
 if(isset($_POST['email'], $_POST['password'], $_POST['username'], $_POST['first_name'], $_POST['last_name'])) {
 
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $email = trim(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    $userName = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
-    $firstName = filter_var($_POST['first_name'], FILTER_SANITIZE_STRING);
-    $lastName = filter_var($_POST['last_name'], FILTER_SANITIZE_STRING);
+    $userName = trim(filter_var($_POST['username'], FILTER_SANITIZE_STRING));
+    $firstName = trim(filter_var($_POST['first_name'], FILTER_SANITIZE_STRING));
+    $lastName = trim(filter_var($_POST['last_name'], FILTER_SANITIZE_STRING));
 
     $statement = $pdo->prepare('INSERT INTO users (email, password, username, first_name, last_name)
     VALUES (:email, :password, :username, :first_name, :last_name)');
@@ -26,4 +26,4 @@ if(isset($_POST['email'], $_POST['password'], $_POST['username'], $_POST['first_
     $statement->execute();
 }
 
-redirect('/');
+redirect('/login.php');

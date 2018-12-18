@@ -14,6 +14,9 @@
           <a class="nav-link <?php echo $_SERVER['SCRIPT_NAME'] === '/create.php' ? 'active' : ''; ?>" href="create.php">Create Account</a>
       </li><!-- /nav-item -->
       <li class="nav-item">
+          <a class="nav-link <?php echo $_SERVER['SCRIPT_NAME'] === '/update.php' ? 'active' : ''; ?>" href="update.php">Update Account</a>
+      </li><!-- /nav-item -->
+      <li class="nav-item">
         <?php if(isset($_SESSION['user'])): ?>
             <a class="nav-link" href="/app/users/logout.php">Logout</a>
         <?php else: ?>

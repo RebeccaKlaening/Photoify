@@ -1,9 +1,8 @@
 <?php
 declare(strict_types=1);
 require __DIR__.'/views/header.php';
-require __DIR__.'/views/profile.php';
-?>
 
+?>
 
 <article>
     <h1>Create Account</h1>
@@ -38,14 +37,6 @@ require __DIR__.'/views/profile.php';
             <small class="form-text text-muted"></small>
         </div><!-- /form-group -->
 
-        <form action="profile" method="post" enctype="multipart/form-data">
-            <div>
-                <label for="image">Please upload your profile pic</label>
-                <input type="file" name="image" id="image" accept=".jpg, png" required>
-            </div>
-
-            <button type="submit">Upload</button>
-        </form>
         <button type="submit" class="btn btn-primary">Create Account</button>
 
     </form>

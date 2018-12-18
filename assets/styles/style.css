@@ -1,14 +1,15 @@
 
 article h1 {
-
 color: pink;
+
 }
+
 
 .user {
   display: inline-block;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-color: pink;
   object-fit: cover;
+
 }
