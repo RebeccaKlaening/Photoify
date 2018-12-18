@@ -14,16 +14,11 @@ require __DIR__.'/views/header.php';
         </div><!-- /form-group -->
 
         <div class="form-group">
-            <label for="name">First name</label>
-            <input class="form-control" type="text" name="first_name" placeholder="Firstname" required>
+            <label for="name">name</label>
+            <input class="form-control" type="text" name="name" placeholder="Name" required>
 
         </div><!-- /form-group -->
 
-        <div class="form-group">
-            <label for="name">Last name</label>
-            <input class="form-control" type="text" name="last_name" placeholder="Lastname" required>
-
-        </div><!-- /form-group -->
 
         <div class="form-group">
             <label for="email">Email</label>

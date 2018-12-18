@@ -23,10 +23,22 @@ if (password_verify($_POST['password'], $user['password'])) {
 
     $_SESSION['message'][] = "Logged in ok!";
 
+    $_SESSION['logedin'] = [
+            'id' => $user['id'],
+            'email' => $user['email'],
+            'name' => $user['name'],
+            'profile_pic' => $user['profile_pic'],
+            'profile_bio' => $user['profile_bio'],
+            'created_at' => $user['created_at'],
+            'username' => $user['username'],
+        ];
+            redirect('/index.php');
+
 } else {
     $_SESSION['message'][] = "Wrong password!";
     redirect('/login.php');
 }
+
 }
 
 
