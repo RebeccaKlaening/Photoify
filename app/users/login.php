@@ -32,7 +32,7 @@ if (password_verify($_POST['password'], $user['password'])) {
             'created_at' => $user['created_at'],
             'username' => $user['username'],
         ];
-            redirect('/index.php');
+            redirect('/profile.php');
 
 } else {
     $_SESSION['message'][] = "Wrong password!";

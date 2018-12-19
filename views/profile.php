@@ -4,6 +4,8 @@ require __DIR__.'/../app/autoload.php';
 
 $userId = $_SESSION['user']['id'];
 
+
+
 $errors = [];
 
 if(isset($_FILES['profile_pic'])) {
@@ -23,7 +25,7 @@ $fileActualExt = strtolower(end($fileExt));
 
 if(count($errors) === 0) {
   $fileName = "profile_$userId.$fileActualExt";
-  $destination = __DIR__.'/../views/img/'.$fileName;
+  $destination = './img/'.$fileName;
 
   move_uploaded_file($profilePic['tmp_name'], $destination);
   $_SESSION['user']['profile_pic'] = $fileName;
@@ -39,6 +41,6 @@ if(count($errors) === 0) {
 }
 
 }
-redirect('/index.php');
+ redirect('/index.php');
 
 ?>
