@@ -9,17 +9,22 @@ require __DIR__.'/views/header.php';
 
     <form action="app/users/update.php" method="post">
         <div class="form-group">
-            <label for="username">Name</label>
+            <label for="username">User Name</label>
+            <input class="form-control" type="text" name="username" placeholder="User Name" required>
+        </div><!-- /form-group -->
+        <div class="form-group">
+            <label for="name">Name</label>
             <input class="form-control" type="text" name="name" placeholder="Name" required>
         </div><!-- /form-group -->
-
         <div class="form-group">
             <label for="name">Email</label>
             <input class="form-control" type="email" name="email" placeholder="Email" required>
 
         </div><!-- /form-group -->
-
-
+        <div class="form-group">
+                 <label for="profile_bio">Edit Profilbio</label>
+                 <textarea class="form-control" type="profile_bio" name="profile_bio" id="profile_bio" rows="8" cols="80"></textarea>
+               </div>
         <div class="form-group">
             <label for="email">New password</label>
             <input class="form-control" type="password" name="newPassword" placeholder="New password" required>
@@ -32,7 +37,7 @@ require __DIR__.'/views/header.php';
             <small class="form-text text-muted"></small>
         </div><!-- /form-group -->
 
-        <button type="submit" class="btn btn-primary">Update Account</button>
+        <button type="submit" class="btn btn-primary">Confirm changes</button>
 
     </form>
 </article>

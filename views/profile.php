@@ -41,6 +41,6 @@ if(count($errors) === 0) {
 }
 
 }
- redirect('/index.php');
+ redirect('/profile.php');
 
 ?>
