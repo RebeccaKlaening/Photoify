@@ -17,7 +17,7 @@ if(isset($_SESSION['message'])) {
 
 <article>
     <h1>Home</h1>
-    <p>This is the home page.</p>
+    <p>Welcome to Photoify.</p>
 </article>
 
 

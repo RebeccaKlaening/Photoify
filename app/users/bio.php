@@ -15,5 +15,22 @@ require __DIR__.'/../autoload.php';
         $statement->bindParam(':profile_bio', $bio, PDO::PARAM_STR);
         $statement->bindParam(':id', $id, PDO::PARAM_INT);
         $statement->execute();
+
+
+        $statement = $pdo->prepare('SELECT * FROM users WHERE id = :id');
+        $statement->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_STR);
+        $statement->execute();
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
+
+        $_SESSION['logedin'] = [
+            'id' => $user['id'],
+            'email' => $user['email'],
+            'name' => $user['name'],
+            'profile_pic' => $user['profile_pic'],
+            'profile_bio' => $user['profile_bio'],
+            'created_at' => $user['created_at'],
+            'username' => $user['username'],
+        ];
+
         redirect('/profile.php');
 }
