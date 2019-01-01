@@ -8,12 +8,14 @@ if(isset($_SESSION['message'])) {
     unset($_SESSION['message']);
 }
 ?>
+<div class="container-profile">
+
 
 <article>
     <h1><?php echo $config['title']; ?></h1>
     <!--- welcome text for the user <!---->
     <?php if (isset($_SESSION['user'])): ?>
-        <p>Wazzup, <?php echo $_SESSION['user']['name']; ?>!</p>
+        <p>Welcome, <?php echo $_SESSION['user']['name']; ?>!</p>
     <?php endif; ?>
 </article>
 
@@ -39,14 +41,14 @@ if(isset($_SESSION['message'])) {
         <div class="form-group">
             <p><b>User name:</b> <?php echo $_SESSION['logedin']['username']; ?></p>
             <p><b>Name:</b> <?php echo $_SESSION['logedin']['name'] ; ?></p>
-            <p><b>Say something about yourself:</b><br> <?php echo $_SESSION['logedin']['profile_bio']; ?></p>
+            <p><b>Say something about yourself:</b> <?php echo $_SESSION['logedin']['profile_bio']; ?></p>
             <label for="profile_bio"></label>
             <textarea class="form-control" type="profile_bio" name="profile_bio" id="profile_bio" rows="4" cols="80"></textarea>
         </div>
     </div>
     <button type="submit" class="bio-button">Add</button><br>
 </form>
-
+</div>
 
 <?php
 require __DIR__.'/posts.php';

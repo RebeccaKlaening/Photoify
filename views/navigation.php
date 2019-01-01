@@ -1,8 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><?php echo $config['title']; ?></a>
 
-  <ul class="navbar-nav">
+
+<nav class ="navbar">
+  <!-- <a href="#">; ?></a> -->
+  <ul>
+      <div class="hamburger-btn" onclick ="openSlideMenu()">
+          <i class="fas fa-bars"></i>
+
+      </div>
       <li class="nav-item">
+
           <?php if(isset($_SESSION['user'])): ?>
               <a class="nav-link" href="/profile.php">Profile</a>
           <?php else: ?>
@@ -33,3 +39,11 @@
       </li><!-- /nav-item -->
   </ul><!-- /navbar-nav -->
 </nav><!-- /navbar -->
+<div id ="side-menu" class="side-nav">
+<a href="#" class="btn-close" onclick ="closeSlideMenu()">&times;</a>
+<a href="/profile.php">Profile</a>
+<a class="nav-link <?php echo $_SERVER['SCRIPT_NAME'] === '/about.php' ? 'active' : ''; ?>" href="about.php">About</a>
+<a class="nav-link <?php echo $_SERVER['SCRIPT_NAME'] === '/start.php' ? 'active' : ''; ?>" href="update.php">Update Account</a>
+<a class="nav-link" href="/app/users/logout.php">Logout</a>
+
+</div>
