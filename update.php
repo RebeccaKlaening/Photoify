@@ -10,20 +10,20 @@ require __DIR__.'/views/header.php';
     <form action="app/users/update.php" method="post">
         <div class="form-group">
             <label for="username">User Name</label>
-            <input class="form-control" type="text" name="username" placeholder="User Name" required>
+            <input class="form-control" type="text" name="username" placeholder="User Name" value="<?= $_SESSION['user']['username']?>"required>
         </div><!-- /form-group -->
         <div class="form-group">
             <label for="name">Name</label>
-            <input class="form-control" type="text" name="name" placeholder="Name" required>
+            <input class="form-control" type="text" name="name" placeholder="Name" value="<?= $_SESSION['user']['name']?>"required>
         </div><!-- /form-group -->
         <div class="form-group">
             <label for="name">Email</label>
-            <input class="form-control" type="email" name="email" placeholder="Email" required>
+            <input class="form-control" type="email" name="email" placeholder="Email" value="<?= $_SESSION['user']['email']?>" required>
 
         </div><!-- /form-group -->
         <div class="form-group">
                  <label for="profile_bio">Edit Profilbio</label>
-                 <textarea class="form-control" type="profile_bio" name="profile_bio" id="profile_bio" rows="8" cols="80"></textarea>
+                 <textarea class="form-control" type="profile_bio" name="profile_bio" id="profile_bio" rows="8" cols="80"><?= $_SESSION['user']['profile_bio'] ?></textarea>
                </div>
         <div class="form-group">
             <label for="email">New password</label>

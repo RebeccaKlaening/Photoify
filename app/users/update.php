@@ -7,9 +7,11 @@ require __DIR__.'/../autoload.php';
 if (isset($_POST['profile_bio'], $_POST['name'], $_POST['email'], $_POST['username'],$_POST['password'])) {
 
 
+
     if(!isset($_SESSION['user'])){
         redirect('/profile.php');
     } else {
+
 
         $id = $_SESSION['user']['id'];
         $bio = trim(filter_var($_POST['profile_bio'],FILTER_SANITIZE_STRING));
@@ -21,6 +23,7 @@ if (isset($_POST['profile_bio'], $_POST['name'], $_POST['email'], $_POST['userna
 
         $statement = $pdo->prepare('UPDATE users SET profile_bio = :profile_bio, name = :name, email = :email, username = :username, password = :password
         WHERE id = :id');
+
         if (!$statement)
         {
             die(var_dump($pdo->errorInfo()));
@@ -35,9 +38,10 @@ if (isset($_POST['profile_bio'], $_POST['name'], $_POST['email'], $_POST['userna
 
         $statement->execute();
 
+
         $statement = $pdo->prepare('SELECT * FROM users WHERE id = :id');
         $statement->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_STR);
-        $statement->execute();
+        // $statement->execute();
         $user = $statement->fetch(PDO::FETCH_ASSOC);
 
         $_SESSION['logedin'] = [

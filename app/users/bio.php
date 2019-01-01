@@ -6,6 +6,7 @@ require __DIR__.'/../autoload.php';
     if (isset($_POST['profile_bio'])) {
         $id = $_SESSION['user']['id'];
         $bio = filter_var($_POST['profile_bio'],FILTER_SANITIZE_STRING);
+
         $statement = $pdo->prepare('UPDATE users SET profile_bio = :profile_bio WHERE id = :id');
         if (!$statement)
         {

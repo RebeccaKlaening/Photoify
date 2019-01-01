@@ -13,14 +13,14 @@ if(isset($_SESSION['message'])) {
     <h1><?php echo $config['title']; ?></h1>
     <!--- welcome text for the user <!---->
     <?php if (isset($_SESSION['user'])): ?>
-        <p>Welcome, <?php echo $_SESSION['user']['name']; ?>!</p>
+        <p>Wazzup, <?php echo $_SESSION['user']['name']; ?>!</p>
     <?php endif; ?>
 </article>
 
 
 <div>
     <?php if (file_exists(__DIR__.'/views/img')): ?>
-        <img src="/views/img/<?= $_SESSION['logedin']['profile_pic'];?>" alt="profile" class="user">
+        <img src="/views/img/<?= $_SESSION['logedin']['profile_pic'];?>" alt="profile" class="profile">
     <?php endif; ?>
 </div>
 
@@ -31,7 +31,7 @@ if(isset($_SESSION['message'])) {
 
     </div>
 
-    <button type="submit" name ="submit">Upload</button>
+    <button type="submit" name ="submit">Upload profilepic</button>
 </form><br>
 
 <div class="bio">
@@ -39,15 +39,16 @@ if(isset($_SESSION['message'])) {
         <div class="form-group">
             <p><b>User name:</b> <?php echo $_SESSION['logedin']['username']; ?></p>
             <p><b>Name:</b> <?php echo $_SESSION['logedin']['name'] ; ?></p>
-            <p><b>Say something about yourself:</b><br> <?php echo $_SESSION['logedin']['profile_bio']; ?></</p>
+            <p><b>Say something about yourself:</b><br> <?php echo $_SESSION['logedin']['profile_bio']; ?></p>
             <label for="profile_bio"></label>
-            <textarea class="form-control" type="profile_bio" name="profile_bio" id="profile_bio" rows="8" cols="80"></textarea>
+            <textarea class="form-control" type="profile_bio" name="profile_bio" id="profile_bio" rows="4" cols="80"></textarea>
         </div>
     </div>
     <button type="submit" class="bio-button">Add</button><br>
 </form>
 
-<?php require __DIR__.'/posts.php'; ?>
 
+<?php
+require __DIR__.'/posts.php';
 
-<?php require __DIR__.'/views/footer.php'; ?>
+require __DIR__.'/views/footer.php'; ?>
