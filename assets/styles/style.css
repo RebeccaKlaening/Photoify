@@ -2,6 +2,7 @@
 body {
 font-family: "Raleway";
 background-color: #f4f4f4;
+
 }
 
 nav li {
@@ -10,11 +11,14 @@ margin: 10px;
 }
 
 .navbar {
-
 background-color: pink;
 height: 60px;
 width: 100%;
-
+position: fixed;
+left: 0;
+top: 0;
+transition: 0.3s;
+z-index: 1;
 }
 
 
@@ -43,12 +47,6 @@ list-style: none;
 
 }
 
-.navbar li {
-float: left;
-
-}
-
-
 article h1 {
 color: pink;
 font-size: 30px;
@@ -60,7 +58,6 @@ font-size: 30px;
 font-size: 35px;
 cursor: pointer;
 list-style: none;
-
 
 }
 
@@ -108,7 +105,8 @@ margin-left: 50px;
 
 .container-profile {
 display: block;
-margin-left: 30px;
+margin-top: 80px;
+margin-left: 5px;
 font-size: 15px;
 }
 
@@ -117,9 +115,6 @@ font-size: 15px;
   border: 1px solid black;
 }
 
-.posts {
-margin-left: 5px;
-}
 .profile {
   display: inline-block;
   width: 200px;
@@ -155,9 +150,16 @@ margin-left: 30px;
 
 @media screen and (max-width: 600px) {
 
+  .hamburger-btn {
+  font-size: 35px;
+  cursor: pointer;
+  list-style: none;
 
   }
 
+  .hamburger-btn:hover {
+  color: #fff;
+  transition: 0.3s;
 
-}
+  }
 }

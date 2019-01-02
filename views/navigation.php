@@ -1,5 +1,5 @@
 
-<nav class ="navbar">
+<nav id ="navbar" class ="navbar">
 
     <ul>
         <?php if(isset($_SESSION['user'])): ?>

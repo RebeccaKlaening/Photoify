@@ -7,7 +7,7 @@ require __DIR__.'/views/header.php';
 <article class="update">
     <h1>Update Account</h1>
 
-    <form action="app/users/update.php" method="post">
+    <form action="app/posts/update.php" method="post">
         <div class="form-group">
             <label for="username">User Name</label>
             <input class="form-control" type="text" name="username" placeholder="User Name" value="<?= $_SESSION['user']['username']?>"required>

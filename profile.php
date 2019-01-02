@@ -38,14 +38,14 @@ if(isset($_SESSION['message'])) {
 <div class="bio">
     <form action="/app/users/bio.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
-            <p><b>User name:</b> <br><?php echo $_SESSION['logedin']['username']; ?></p>
-            <p><b>Name:</b><br><?php echo $_SESSION['logedin']['name'] ; ?></p>
-            <p><b>Say something about yourself:</b><br> <?php echo $_SESSION['logedin']['profile_bio']; ?></p>
+            <p><b>User name</b> <br><?php echo $_SESSION['logedin']['username']; ?></p>
+            <p><b>Name</b><br><?php echo $_SESSION['logedin']['name'] ; ?></p>
+            <p><b>Say something about yourself</b><br> <?php echo $_SESSION['logedin']['profile_bio']; ?></p>
             <label for="profile_bio"></label>
-            <textarea class="form-control" type="profile_bio" name="profile_bio" id="profile_bio" rows="8" cols="50"></textarea>
+            <textarea class="form-control" type="profile_bio" name="profile_bio" id="profile_bio" rows="8" cols="40"></textarea>
         </div>
     </div> <br>
-    <button class="profile-btn" type="submit" class="bio-button">Add</button><br>
+    <button class="profile-btn" type="submit" class="bio-button">Add Bio</button><br>
 </form>
 </div>
 
