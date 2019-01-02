@@ -26,3 +26,12 @@ function getPosts(INT $id, $pdo) {
 
     return $posts;
 }
+
+
+// if(!isset($_COOKIE[$logedout])) {
+//     echo "Cookie named '" . $logedout . "' is not set!";
+// } else {
+//     echo "Cookie '" . $logedout . "' is set!<br>";
+//     echo "Value is: " . $_COOKIE[$logedout];
+// }
+// ?>

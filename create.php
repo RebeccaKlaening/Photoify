@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 require __DIR__.'/views/header.php';
-
 ?>
 
+
 <article class="create-login">
-    <h1>Create Account</h1>
+<h1>Create Account</h1>
 
     <form action="app/users/create.php" method="post">
         <div class="form-group">

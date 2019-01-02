@@ -1,25 +1,37 @@
-/* * {
-margin: 0;
-} */
+
 body {
-font-family: "Roboto", sans-serif;
+font-family: "Raleway";
 background-color: #f4f4f4;
 }
 
+nav li {
+list-style: none;
+margin: 10px;
+}
+
 .navbar {
+
 background-color: pink;
-overflow: hidden;
-height: 100px;
+height: 60px;
+width: 100%;
+
+}
+
+
+p {
+text-transform: uppercase;
 }
 
 .navbar a {
-  float: left;
+  line-height: 45px;
   text-align: center;
   color: black;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
 }
+
+
 .navbar a:hover {
 color: #fff;
 transition: 0.3s;
@@ -31,21 +43,31 @@ list-style: none;
 
 }
 
+.navbar li {
+float: left;
+
+}
+
+
 article h1 {
 color: pink;
-margin-left: 10px;
+font-size: 30px;
+
 
 }
 
 .hamburger-btn {
 font-size: 35px;
 cursor: pointer;
+list-style: none;
+
 
 }
 
 .hamburger-btn:hover {
 color: #fff;
 transition: 0.3s;
+
 }
 
 .side-nav {
@@ -84,32 +106,58 @@ font-size: 36px;
 margin-left: 50px;
 }
 
-.container-profile,
-.posts {
-margin-left: 20px;
+.container-profile {
+display: block;
+margin-left: 30px;
+font-size: 15px;
 }
 
+.profile-btn {
+  font-size: 20px;
+  border: 1px solid black;
+}
+
+.posts {
+margin-left: 5px;
+}
 .profile {
   display: inline-block;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
 
 }
 
-.bio {
-width: 200px;
-
-}
-
 .image {
   display: inline-block;
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   object-fit: cover;
 
 }
 
-@media screen and (max-width: 768px) {
-   {
+.update {
+margin-left: 30px;
+}
+.profile-btn {
+    background-color: pink;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+
+  }
+
+
+
+@media screen and (max-width: 600px) {
+
+
+  }
+
+
+}
+}
