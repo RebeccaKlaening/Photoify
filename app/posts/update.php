@@ -40,7 +40,7 @@ if (isset($_POST['profile_bio'], $_POST['name'], $_POST['email'], $_POST['userna
 
 
         $statement = $pdo->prepare('SELECT * FROM users WHERE id = :id');
-        $statement->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_STR);
+        $statement->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_INT);
         $statement->execute();
         $user = $statement->fetch(PDO::FETCH_ASSOC);
 

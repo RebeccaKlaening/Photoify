@@ -14,12 +14,13 @@ if (!$statement)
 $statement->bindParam(':id', $delete, PDO::PARAM_INT);
 $statement->execute();
 
-$_SESSION['posts'] = [
 
+$_SESSION['posts'] = [
     'user_id' => $id,
     'content' => $content,
     'description' => $description,
     'created_at' => $created,
 ];
-}
+
 redirect('/profile.php');
+}

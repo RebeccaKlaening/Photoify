@@ -1,5 +1,6 @@
 <article class="posts">
     <form action="/app/posts/posts.php" method="post" enctype="multipart/form-data">
+
         <div>
             <input type="file" name="content" value= 1000000 id="content" accept=".jpg", ".jpeg", ".png" required>
 
@@ -16,17 +17,22 @@
         <?php $posts = getPosts($_SESSION['user']['id'], $pdo);
         foreach($posts as $post): ?>
         <img src="<?='/app/posts/upload-posts/'. $post['content'];?>" class="image">
-        <p><?php echo $post['description']; ?></p>
 
-        <div data-id="<?= $post['id']?>" class="post-edit">
+            <form action="app/posts/likes.php"  method="post" enctype="multipart/form-data">
+            <div id ="heart-js" class="heart" onclick ="heartLikes()" ><i class="far fa-heart"></i></div>
+            <div id ="heart-js" class="heart"onclick ="heartLikes()"><i class="fas fa-heart"></i></div>
+            </form>
 
-         <form action="app/posts/updatePosts.php"  method="post" enctype="multipart/form-data">
-           <div class="form-group">
-             <label for="description">Edit description</label>
-             <textarea class="form-control" type="text" name="description"> <?php echo $post['description']; ?></textarea>
-           </div>
-           <button type="submit" class="post" name="post_id" value="<?= $post['id'] ?>">EDIT</button>
-         </form>
+            <p class ="description"><?php echo $post['description']; ?></p>
+
+
+            <form action="app/posts/updatePosts.php"  method="post" enctype="multipart/form-data">
+               <div class="form-group">
+                 <label for="post_description">Edit description</label>
+                 <textarea class="form-control" type="text" name="post_description"> <?php echo $post['description']; ?></textarea>
+               </div>
+               <button type="submit" class="post" name="user_id" value="<?= $post['id'] ?>">EDIT</button>
+             </form>
 
          <form action="app/posts/delete.php" method="post" enctype="multipart/form-data">
            <div class="form-group">
@@ -38,6 +44,7 @@
          </div>
 
     <?php endforeach; ?>
+
 
 </form>
 </article>
