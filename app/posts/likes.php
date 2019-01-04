@@ -2,27 +2,29 @@
 declare(strict_types=1);
 require __DIR__.'/../autoload.php';
 // In this file we delete posts in the database.
-if(isset($_POST['dislikes'], $_POST['likes'])){
 
-  $likes  = trim(filter_var($_POST['likes'], FILTER_SANITIZE_STRING));
-  $id = (int) $_POST['post_id'];
+if (isset($_GET['likes'], $_GET['post_id'])) {
+    $post_id = $_GET['post_id'];
+    $user_id = $_SESSION['logedin']['user_id'];
 
-  $statement = $pdo->prepare('INSERT INTO likes(post_id, likes) VALUES( :post_id,likes)');
-  //if not die
-  if (!$statement)
-  {
-      die(var_dump($pdo->errorInfo()));
-  }
+    if ($_GET['likes'] === 'like') {
+        $statement = $pdo->prepare('INSERT INTO likes (user_id,post_id) VALUES (:user_id,:post_id);');
 
-  $statement->bindParam(':likes', $dislikes, PDO::PARAM_STR);
-  $statement->bindParam(':post_id', $id, PDO::PARAM_INT);
-  $statement->execute();
+    if (!$statement) {
+    die(var_dump($pdo->errorInfo()));
+    }
 
-    $_SESSION['likes'] = [
-        'post_id' => $id,
-        'likes' => $likes,
-        'dislikes' => $dislikes,
+    $statement->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+    $statement->bindParam(':post_id', $post_id, PDO::PARAM_INT);
+    $statement->execute();
 
-    ];
-  }
-redirect('/profile.php');
+    redirect('/profile.php');
+
+//     $_SESSION['likes'] = [
+//         'post_id' => $post_id,
+//         'likes' => $likes,
+//         'dislikes' => $dislikes,
+//
+//     ];
+//   }
+// redirect('/profile.php');

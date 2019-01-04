@@ -31,7 +31,7 @@ require __DIR__.'/views/header.php';
                 <br>
         <div class="form-group">
             <label for="email">New password</label>
-            <input class="form-control" type="password" name="newPassword" placeholder="New password" required>
+            <input class="form-control" type="password" name="newPassword" placeholder="New password">
 
         </div><!-- /form-group -->
             <br>

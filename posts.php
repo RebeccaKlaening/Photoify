@@ -9,24 +9,30 @@
             <textarea class="form-control" type="description" name="description" id="description" rows="8" cols="40"></textarea>
 
         </div>
+                <input class ="profile-btn" type="submit" name="content" value="Upload Image">
+            </form>
         <br>
-        <div>
-            <input class ="profile-btn" type="submit" name="content" value="Upload Image">
 
-        </div>
+        <div class="post-img">
         <?php $posts = getPosts($_SESSION['user']['id'], $pdo);
         foreach($posts as $post): ?>
         <img src="<?='/app/posts/upload-posts/'. $post['content'];?>" class="image">
 
-            <form action="app/posts/likes.php"  method="post" enctype="multipart/form-data">
-            <div id ="heart-js" class="heart" onclick ="heartLikes()" ><i class="far fa-heart"></i></div>
-            <div id ="heart-js" class="heart"onclick ="heartLikes()"><i class="fas fa-heart"></i></div>
-            </form>
-
             <p class ="description"><?php echo $post['description']; ?></p>
 
+            <form action="app/posts/likes.php"  method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="post_id"></label>
+                </div>
+            <div id ="heart-js" class="heart" name="likes" onclick ="heartLikes()" ><i class="far fa-heart"></i></div>
+            <div id ="heart2-js" class="heart2" name="likes" onclick ="heartLikes()"><i class="fas fa-heart"></i></div>
+            </form>
 
-            <form action="app/posts/updatePosts.php"  method="post" enctype="multipart/form-data">
+            </div>
+
+            <div data-id="<?= $post['id']?>" class="">
+
+            <form action="app/posts/edit.php"  method="post" enctype="multipart/form-data">
                <div class="form-group">
                  <label for="post_description">Edit description</label>
                  <textarea class="form-control" type="text" name="post_description"> <?php echo $post['description']; ?></textarea>
@@ -41,10 +47,9 @@
            <button type="submit" class="delete" name="delete_post" value="<?= $post['id'] ?>">DELETE</button>
          </form>
 
-         </div>
-
-    <?php endforeach; ?>
+        </div>
 
 
-</form>
+     <?php endforeach; ?>
+
 </article>
