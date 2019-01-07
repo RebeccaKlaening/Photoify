@@ -21,9 +21,18 @@ if(isset($_POST['email'], $_POST['password'], $_POST['username'], $_POST['name']
     $statement->bindParam(':password', $password, PDO::PARAM_STR);
     $statement->bindParam(':username', $userName, PDO::PARAM_STR);
     $statement->bindParam(':name', $name, PDO::PARAM_STR);
-
-
     $statement->execute();
+    $user = $statement->fetch(PDO::FETCH_ASSOC);
 }
+
+$_SESSION['logedin'] = [
+    'id' => $id,
+    'email' => $email,
+    'name' => $name,
+    'profile_pic' => $profile_pic,
+    'profile_bio' => $profile_bio,
+    'username' => $username,
+];
+
 
 redirect('/login.php');

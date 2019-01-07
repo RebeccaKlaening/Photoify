@@ -44,7 +44,6 @@ if (isset($_POST['profile_bio'], $_POST['name'], $_POST['email'], $_POST['userna
 
         if(isset($_POST['newPassword'], $_POST['password']) && $_POST['password'] !== "") {
 
-
         if(!isset($_SESSION['user'])){
             redirect('/profile.php');
         } else {

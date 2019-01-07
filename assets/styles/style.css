@@ -19,6 +19,26 @@ font-size: 30px;
 
 }
 
+@media screen and (max-width: 600px) {
+
+.post-edit {
+ transform: translateX(-250px);
+}
+
+.slide-edit {
+ transform: translateX(60px);
+ display: block;
+ width: 200px;
+ height: 110px;
+transition: 0.5s;
+ background-color: pink;
+}
+
+.fa-edit {
+font-size: 30px;
+cursor: pointer;
+}
+
 .heart {
 font-size: 30px;
 cursor: pointer;
@@ -48,7 +68,7 @@ transition: 0.3s;
 
 }
 
-
+}
 .container-profile {
 display: block;
 margin-top: 80px;
@@ -73,7 +93,7 @@ font-size: 15px;
 }
 
 .image {
-  display: inline-block;
+  /* display: inline-block; */
   width: 350px;
   height: 350px;
   object-fit: cover;
@@ -113,6 +133,15 @@ font-size: 15px;
 
   .navbar ul {
     margin: 0;
+
+}
+
+
+.image {
+  /* display: inline-block; */
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
 
 }
 

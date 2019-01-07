@@ -45,7 +45,8 @@ if(isset($_SESSION['message'])) {
             <textarea class="form-control" type="profile_bio" name="profile_bio" id="profile_bio" rows="8" cols="40"></textarea>
         </div>
     </div> <br>
-    <button class="profile-btn" type="submit" class="bio-button">Add Bio</button><br>
+
+    <button class="profile-btn" type="submit">Update Bio</button><br><br>
 </form>
 </div>
 

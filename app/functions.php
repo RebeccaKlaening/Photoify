@@ -29,15 +29,4 @@ function getPosts(INT $id, $pdo) {
 
 
 
-// function getLikes(INT $id, $pdo) {
-//
-//     $statement = $pdo->prepare('SELECT * FROM likes WHERE post_id = :post_id');
-//     $statement->bindParam(':post_id', $id, PDO::PARAM_INT);
-//     $statement->execute();
-//     $likes = $statement->fetchAll(PDO::FETCH_ASSOC);
-//
-//     return $likes;
-// }
-//
-
 ?>

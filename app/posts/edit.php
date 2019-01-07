@@ -2,12 +2,12 @@
 declare(strict_types=1);
 require __DIR__.'/../autoload.php';
 // In this file we delete posts in the database.
-if(isset($_POST['post_description'], $_POST['user_id'])){
+if(isset($_POST['post_description'], $_POST['post_id'])){
 
   $description  = trim(filter_var($_POST['post_description'], FILTER_SANITIZE_STRING));
-  $id = (int) $_POST['user_id'];
+  $id = (int) $_POST['post_id'];
 
-  $statement = $pdo->prepare('UPDATE posts SET description = :description, id = :id WHERE id = :id');
+  $statement = $pdo->prepare('UPDATE posts SET description = :description WHERE id = :id');
   //if not die
   if (!$statement)
   {
