@@ -1,22 +1,27 @@
 "use strict";
 
-window.onscroll = function() {
-  scrollFunction();
-};
+// window.onscroll = function() {
+//   scrollFunction();
+// };
+let navbar = document.getElementById("navbar-js");
+let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+let lastScrollTop = scrollTop;
 
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 100
-  ) {
+window.addEventListener('scroll', function (){
+ scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+  if(scrollTop > lastScrollTop) {
 
-    document.getElementById("navbar-js").style.top = "-70px";
-  } else {
-    document.getElementById("navbar-js").style.top = "0";
-  }
+    navbar.style.top = "-70px";
+}   else {
+    navbar.style.top = "0";
 }
+  lastScrollTop = scrollTop;
 
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+
+});
+
+
+// function topFunction() {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// }

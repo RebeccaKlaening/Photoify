@@ -26,4 +26,4 @@ if(isset($_POST['post_description'], $_POST['post_id'])){
       'created_at' => $created,
   ];
 }
-redirect('/profile.php');
+redirect('/gallery.php');

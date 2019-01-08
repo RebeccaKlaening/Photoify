@@ -3,9 +3,16 @@ list-style: none;
 margin: 10px;
 }
 
+.photoify {
+line-height: 10px;
+display: flex;
+
+
+
+}
 .navbar {
 background-color: pink;
-height: 60px;
+height: 70px;
 width: 100%;
 position: fixed;
 left: 0;
@@ -19,7 +26,7 @@ z-index: 1;
   color: black;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 20px;
   float: left;
 }
 

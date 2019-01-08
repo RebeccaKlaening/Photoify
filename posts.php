@@ -1,4 +1,5 @@
-<article class="posts">
+<article>
+
     <form action="/app/posts/posts.php" method="post" enctype="multipart/form-data">
 
         <div>
@@ -14,43 +15,50 @@
     <br>
 
 
-        <?php $posts = getPosts($_SESSION['user']['id'], $pdo);
-        foreach($posts as $post): ?>
-        <img src="<?='/app/posts/upload-posts/'. $post['content'];?>" class="image">
+    <?php $posts = getPosts($_SESSION['user']['id'], $pdo);
+    foreach($posts as $post): ?>
+<section>
+<div class="posts">
+   <img src="<?='/app/posts/upload-posts/'. $post['content'];?>" class="image"></div></section>
 
-        <p class ="description"><?php echo $post['description']; ?></p>
+    <p class ="description"><?php echo $post['description']; ?></p>
 
-        <div data-id="<?= $like['id']?>" class="">
+
         <form action="app/posts/likes.php"  method="post" enctype="multipart/form-data">
+            <input type="text" style="display:none" hidden name="post_id" value="<?= $post['id']?>">
             <div class="form-group">
-                <label for="post_id"></label>
+                <label for="likes_add"></label>
             </div>
 
-            <div id ="heart-js" class="heart" name="likes" onclick ="heartLikes()" value="<?= $like['id'] ?>"><i class="far fa-heart"></i></div>
-            <div id ="heart2-js" class="heart2" name="likes" onclick ="heartLikes()"value="<?= $like['id'] ?>"><i class="fas fa-heart"></i></div>
+            <div type="submit" id ="heart-js" class="heart" onclick ="myFunction()" name="likes_add"><i class="far fa-heart"></i></div>
 
-            </div>
+            <button id ="heart2-js" class="heart2" name="likes_add" onclick ="myFunction()"value=""><i class="fas fa-heart"></i>
+                <?php echo $post['likes']?></button>
 
-        </form>
+    </form>
 
-        <i data-id="<?= $post['id']?>" class="far fa-edit change-post"></i>
-        <div data-id="<?= $post['id']?>" class="post-edit">
+
+    <i data-id="<?= $post['id']?>" class="far fa-edit change-post"></i>
+    <div data-id="<?= $post['id']?>" class="post-edit">
 
         <form action="app/posts/edit.php"  method="post" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="post_description">Edit description</label>
-                <textarea class="form-control" type="text" name="post_description"> <?php echo $post['description']; ?></textarea>
+                <label class="editDescription"for="post_description">Edit description</label>
+            <div class="form-control">
+
+            <textarea type="text" name="post_description"> <?php echo $post['description']; ?></textarea></div>
             </div>
-            <button type="submit" class="post" name="post_id" value="<?= $post['id'] ?>">EDIT</button>
+    <div class="edit">
+     <button type="submit" class="post" name="post_id" value="<?= $post['id'] ?>">EDIT</button></div>
         </form>
 
         <form action="app/posts/delete.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="delete_post">Delete Post</label>
             </div>
-            <button type="submit" class="delete" name="delete_post" value="<?= $post['id'] ?>">DELETE</button>
+            <div class="delete"><button type="submit" class="delete" name="post_id" value="<?= $post['id'] ?>">DELETE</button></div>
         </div>
-        </form>
-
+    </form>
 <?php endforeach; ?>
+
 </article>

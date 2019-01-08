@@ -3,22 +3,20 @@
 
 
 <article class="create-login">
-
+        <div class="form-group">
     <h1 class="h1-login">Login</h1>
     <form action="app/users/login.php" method="post">
-        <div class="form-group">
             <label for="username">Username</label> <br>
-            <input class="form-control" type="username" name="username" placeholder="Username" required>
-
-        </div><!-- /form-group -->
+            <input type="username" name="username" placeholder="Username" required>
 
         <div class="form-group">
             <label for="password">Password</label> <br>
-            <input class="form-control" type="password" name="password" required>
+            <input type="password" name="password" required>
 
         </div><!-- /form-group -->
 
         <button type="submit" class="btn btn-primary">Login</button>
+</div>
     </form>
 </article>
 

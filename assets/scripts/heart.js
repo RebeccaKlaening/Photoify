@@ -1,13 +1,43 @@
 'use strict';
+//
+// function hearts() {
+//   document.getElementById("heart-js").style.color = "red";
+//
+// }
+//
+// function hearts() {
+//   document.getElementById("heart2-js").style.color = "red";
+// }
 
-function heartLikes () {
-  document.getElementById("heart-js").style.color = "red";
-
+function myFunction() {
+  let element = document.getElementById("heart2-js");
+   element.classList.toggle("heart2");
 }
 
-function heartLikes () {
-  document.getElementById("heart2-js").style.color = "red";
-}
+// let hearts = document.getElementById("heart-js");
+//
+// function addClass()
+// {
+//   hearts.classList.add('heart2');
+// }
+//
+// function removeClass() {
+//
+//
+//   hearts.classList.remove('heart');
+//
+// }
+//
+
+
+
+// const hearts = document.querySelector('hearts');
+// const button =  document.querySelector('heart');
+// button.addEventListener('click' ; () => {
+// 	hearts.classList.add('heart2');
+// })
+// console.log(hearts);
+//
 
 
 

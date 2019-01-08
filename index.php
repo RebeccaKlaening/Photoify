@@ -4,7 +4,7 @@ require __DIR__.'/views/header.php';
 
 
 if(!isset($_SESSION['logedin'])) {
-    redirect('/login.php');
+    redirect('/index.php');
 }
 
 
@@ -15,9 +15,8 @@ if(isset($_SESSION['message'])) {
 
 ?>
 
-<article>
-    <h1>Home</h1>
-    <p>Welcome to Photoify.</p>
+<article class="start">
+    <h1 class="home">Photoify</h1>
 </article>
 
 
