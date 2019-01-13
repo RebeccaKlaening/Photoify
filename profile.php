@@ -10,13 +10,13 @@ if(isset($_SESSION['message'])) {
 ?>
 <div class="container-profile">
 
-<article>
+<article class="profile-section">
     <h1>Profile</h1>
     <!--- welcome text for the user <!---->
     <?php if (isset($_SESSION['user'])): ?>
-        <p>Welcome, <?php echo $_SESSION['user']['name']; ?>!</p>
+        <h3 class="welcome">Welcome, <?php echo $_SESSION['user']['name']; ?>!</h3>
     <?php endif; ?>
-</article>
+
 
 
 <div>
@@ -27,27 +27,27 @@ if(isset($_SESSION['message'])) {
 
 <form action="/views/profile.php" method="post" enctype="multipart/form-data">
         <div>
-         <label for="image"><b>Please choose a profile image</b></label> <br>
+         <label for="image"></label> <br>
     <input type="file" name="profile_pic" id="image" accept=".jpg", ".jpeg", ".png" required>
 
     </div>
 
     <button class="profile-btn" type="submit" name ="submit">Upload profilepic</button>
 </form><br>
-
+</article>
 <div class="bio">
     <form action="/app/users/bio.php" method="post" enctype="multipart/form-data">
         <div class="bio">
-            <p><b>User name: </b><br><?php echo $_SESSION['logedin']['username']; ?></p>
-            <p><b>Name: </b> <br><?php echo $_SESSION['logedin']['name'] ; ?></p></div>
-            <p><b>Say something about yourself:</b><br> <?php echo $_SESSION['logedin']['profile_bio']; ?></p>
+            <p><b>User name: </b><br><br><?php echo $_SESSION['logedin']['username']; ?></p>
+            <p><b>Name: </b> <br><br><?php echo $_SESSION['logedin']['name'] ; ?></p></div>
+            <p><b>Say something about yourself:</b><br><br> <?php echo $_SESSION['logedin']['profile_bio']; ?></p>
             <label for="profile_bio"></label>
-            <textarea class="form-control" type="profile_bio" name="profile_bio" id="profile_bio" rows="8" cols="40"></textarea>
+            <!-- <textarea class="form-control" type="profile_bio" name="profile_bio" id="profile_bio" rows="8" cols="40"></textarea> -->
 
     </div> <br>
-
-    <button class="profile-btn" type="submit">Update Bio</button><br><br>
 </form>
+        <button class="profile-btn" type="submit"><a class="" href="/update.php">Update Bio</a></button><br><br><br>
+        <!-- <button class="profile-btn" type="submit"><a class="" href="/gallery.php">Go to gallery</a></button><br><br><br> -->
 </div>
 
 <?php require __DIR__.'/views/footer.php'; ?>

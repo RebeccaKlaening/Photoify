@@ -14,30 +14,6 @@ function myFunction() {
    element.classList.toggle("heart2");
 }
 
-// let hearts = document.getElementById("heart-js");
-//
-// function addClass()
-// {
-//   hearts.classList.add('heart2');
-// }
-//
-// function removeClass() {
-//
-//
-//   hearts.classList.remove('heart');
-//
-// }
-//
-
-
-
-// const hearts = document.querySelector('hearts');
-// const button =  document.querySelector('heart');
-// button.addEventListener('click' ; () => {
-// 	hearts.classList.add('heart2');
-// })
-// console.log(hearts);
-//
 
 
 
@@ -53,8 +29,3 @@ posts.forEach(post => {
    // postEdit.classList.add('.slide-edit');
  });
 });
-
-//
-// function heartLikes (x) {
-//   x.classList.toggle("heart2-js");
-// }

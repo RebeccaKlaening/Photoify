@@ -1,8 +1,5 @@
 "use strict";
 
-// window.onscroll = function() {
-//   scrollFunction();
-// };
 let navbar = document.getElementById("navbar-js");
 let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
 let lastScrollTop = scrollTop;
@@ -19,9 +16,3 @@ window.addEventListener('scroll', function (){
 
 
 });
-
-
-// function topFunction() {
-//   document.body.scrollTop = 0;
-//   document.documentElement.scrollTop = 0;
-// }
