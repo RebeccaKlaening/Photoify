@@ -19,5 +19,10 @@ if(isset($_SESSION['message'])) {
     <h1 class="home">Photoify</h1>
 </article>
 
+<div class="create-account">
+<a class="nav-link <?php echo $_SERVER['SCRIPT_NAME'] === '/start.php' ? 'active' : ''; ?>" href="create.php">Create Account</a>
+
+<a class="nav-item" <?php echo $_SERVER['SCRIPT_NAME'] === '/login.php' ? 'active' : ''; ?> href="login.php">Login</a>
+</div>
 
 <?php require __DIR__.'/views/footer.php'; ?>

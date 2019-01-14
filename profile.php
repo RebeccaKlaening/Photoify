@@ -14,7 +14,7 @@ if(isset($_SESSION['message'])) {
     <h1>Profile</h1>
     <!--- welcome text for the user <!---->
     <?php if (isset($_SESSION['user'])): ?>
-        <h3 class="welcome">Welcome, <?php echo $_SESSION['user']['name']; ?>!</h3>
+        <h2 class="welcome">Welcome, <?php echo $_SESSION['user']['name']; ?>!</h2>
     <?php endif; ?>
 
 
@@ -27,12 +27,12 @@ if(isset($_SESSION['message'])) {
 
 <form action="/views/profile.php" method="post" enctype="multipart/form-data">
         <div>
-         <label for="image"></label> <br>
-    <input type="file" name="profile_pic" id="image" accept=".jpg", ".jpeg", ".png" required>
-
+         <label for="image"></label>
+    <input  class="upload-content" type="file" name="profile_pic" id="image" accept=".jpg", ".jpeg", ".png" required><br><br>
+        <button class="profile-btn" type="submit" name ="submit">Upload profilepic</button>
     </div>
 
-    <button class="profile-btn" type="submit" name ="submit">Upload profilepic</button>
+    <!-- <button class="profile-btn" type="submit" name ="submit">Upload profilepic</button> -->
 </form><br>
 </article>
 <div class="bio">

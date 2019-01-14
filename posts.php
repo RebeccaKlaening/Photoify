@@ -1,21 +1,22 @@
 <article>
 
-    <form action="/app/posts/posts.php" method="post" enctype="multipart/form-data">
+    <!-- <form action="/app/posts/posts.php" method="post" enctype="multipart/form-data">
 
-        <div>
+        <div class="pop-up">
             <p><b>Say something about this image</b><br></p>
             <label for="description"></label>
             <textarea class="image-desc" type="description" name="description" id="description" rows="8" cols="40"></textarea>
+            <button class ="profile-btn" type="submit" name="content" value="Upload Image">Upload Image</button>
             <input type="file" name="content" value= 1000000 id="content" accept=".jpg", ".jpeg", ".png" required>
         </div>
-        <button class ="profile-btn" type="submit" name="content" value="Upload Image">Upload Image</button>
+
     </form>
-    <br>
+    <br><br> -->
 
 
     <?php $posts = getPosts($_SESSION['user']['id'], $pdo);
     foreach($posts as $post): ?>
-<section>
+<br><section>
 <div class="posts">
    <img src="<?='/app/posts/upload-posts/'. $post['content'];?>" class="image"></div></section>
 
@@ -39,7 +40,7 @@
 
         <form action="app/posts/edit.php"  method="post" enctype="multipart/form-data">
 
-            <div class="form-control">
+            <div>
 
             <textarea class="edit" type="text" name="post_description"> <?php echo $post['description']; ?></textarea></div>
 
@@ -53,7 +54,7 @@
             <!-- </div> -->
             <button type="submit" class="post" name="post_id" value="<?= $post['id'] ?>">DELETE</button>
         </div>
-    </form>
+    </form><br><br><br><br><br>
 <?php endforeach; ?>
 
 </article>

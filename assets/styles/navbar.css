@@ -3,13 +3,6 @@ list-style: none;
 margin: 10px;
 }
 
-.photoify {
-line-height: 10px;
-display: flex;
-
-
-
-}
 .navbar {
 background-color: #f1cbff;
 height: 70px;
@@ -22,12 +15,13 @@ z-index: 1;
 }
 
 .navbar a {
-  text-align: center;
+  /* text-align: center; */
   color: black;
   padding: 14px 16px;
+  line-height: 10px;
   text-decoration: none;
-  font-size: 20px;
-  float: left;
+  font-size: 17px;
+  /* float: left; */
 }
 
 

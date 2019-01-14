@@ -6,7 +6,7 @@ require __DIR__.'/views/header.php'; ?>
 
 
     <h1 class="gallery">Gallery</h1>
-        <p class="gallery-p"><b>This is the gallery page<b></p>
+        <!-- <p class="gallery-p"><b>This is the gallery page<b></p> -->
     <?php if (file_exists(__DIR__.'/views/img')): ?>
         <img src="/views/img/<?= $_SESSION['logedin']['profile_pic'];?>" alt="profile" class="profile-gallery">
     <?php endif; ?>
@@ -14,7 +14,7 @@ require __DIR__.'/views/header.php'; ?>
 <form action="/views/profile.php" method="post" enctype="multipart/form-data">
 
 </form><br>
-
+    <!-- <p class="profile-gallery"><b>User name: </b><br><br><?php echo $_SESSION['logedin']['username']; ?></p> -->
 </article>
 
 <?php require __DIR__.'/posts.php';

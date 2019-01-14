@@ -5,11 +5,11 @@
 
 <?php if(isset($_SESSION['user'])): ?>
 <footer id="footer">
-    <i class="fab fa-facebook-square"></i>
+<!-- <i class="fab fa-facebook-square"></i> -->
     <i class="fab fa-instagram"></i>
-    <a class="" href="/gallery.php"><i class="far fa-plus-square"></i></a>
-    <i class="fab fa-twitter-square"></i>
-    <i class="fab fa-snapchat-square"></i>
+    <a class="" href="/image.php"><i class="far fa-plus-square"></i></a>
+    <a class="" href="/profile.php"><i class="far fa-user"></i></a>
+
 
 </footer>
 <?php endif; ?>

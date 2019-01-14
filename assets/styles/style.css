@@ -1,7 +1,7 @@
 
 body {
   font-family: "Raleway";
-  /* background-color: #FFFFFF; */
+  background-color: 	#FFFAFA;
 
 
 }
@@ -12,6 +12,7 @@ h2 {
 }
 
 article h1 {
+  font-family: "Happy Monkey";
   color: pink;
   font-size: 30px;
   text-align: center;
@@ -34,7 +35,7 @@ footer {
 }
 
 footer i {
-
+  color: black;
   font-size: 30px;
 }
 
@@ -47,20 +48,19 @@ footer i {
 .start {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .create {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 .gallery {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 .home {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .update {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .welcome {
@@ -80,7 +80,7 @@ text-align: center;
     height: 160px;
     transition: ease-in-out;
     transition: 0.5s;
-    border-radius: 20px;
+    box-shadow: 0 8px 6px -6px black;
     background-color: #f1cbff;
     color: white;
     text-align: center;
@@ -99,7 +99,7 @@ text-align: center;
 
 
   .heart2 {
-    color: 	#FF1493;
+    color: 	red;
     font-size: 30px;
     cursor: pointer;
     /* visibility: hidden; */
@@ -108,8 +108,10 @@ text-align: center;
   }
 
   .edit {
+  height: 30px;
   text-align: center;
   font-size: 20px;
+
 }
 
 
@@ -165,7 +167,7 @@ text-align: center;
 }
 
 .h1-login {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 
@@ -226,18 +228,25 @@ text-align: center;
     margin-bottom: 40px;
   }
   .profile-btn a {
+    color: black;
     text-decoration: none;
     font-size: 15px;
   }
 
   p {
+  font-size: 17px;
   text-transform: uppercase;
+}
+
+  .pop-up-p {
+    text-align: center;
+    text-transform: uppercase;
 }
 
   .edit-bio {
     font-family: "Raleway";
     text-align: center;
-    width: 60%;
+    width: 250px;
     font-size: 15px;
     height: 80px;
     border: 1px solid silver;
@@ -268,7 +277,7 @@ text-align: center;
     transform: scale(1.1);
   }
   .post {
-  color: white;
+  color: black;
   font-size: 20px;
 
   }
@@ -278,18 +287,40 @@ text-align: center;
 
 }
 
+.pop-up {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-top: 150px;
+}
+
+.description-popup {
+display: block;
+}
+
 .image-desc {
+
 border: 1px solid silver;
+margin-bottom: 10px;
 width: 80%;
 height: 100px;
 }
 
 .input {
+font-family: "Raleway";
 border: 1px solid silver;
 text-align: center;
 font-size: 15px;
-width: 100%;
+width: 250px;
 height: 40px;
+}
+
+.upload-content {
+border: 1px solid silver;
+font-size: 17px;
+width: 230px;
+height: 26px;
 }
 
 .profile-section {
@@ -303,4 +334,22 @@ border-bottom: 1px solid black;
 width: 100%;
 }
 
+.create-account {
+text-decoration: none;
+color: black;
+display: flex;
+justify-content: space-around;
+}
+
+.arrow {
+display: flex;
+justify-content: flex-start;
+color: black;
+margin-left: 30px;
+font-size: 30px;
+}
+
+.fa-arrow-left  {
+color: black;
+}
 }
