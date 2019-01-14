@@ -4,7 +4,7 @@ require __DIR__.'/../autoload.php';
 // In this file we delete new posts in the database.
 if(isset($_POST['post_id'])){
 
-  $delete = trim(filter_var($_POST['post_id'], FILTER_SANITIZE_NUMBER_INT));
+  $delete = filter_var(trim($_POST['post_id']), FILTER_SANITIZE_NUMBER_INT);
 
 $statement = $pdo->prepare('DELETE FROM posts WHERE id = :id');
 //if not die

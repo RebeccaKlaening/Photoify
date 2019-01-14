@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Happy+Monkey');
 
 body {
   font-family: "Raleway";
@@ -14,7 +15,7 @@ h2 {
 article h1 {
   font-family: "Happy Monkey";
   color: pink;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
 
 }
@@ -39,12 +40,6 @@ footer i {
   font-size: 30px;
 }
 
-.fa-plus-square {
-  color: black;
-  font-size: 45px;
-}
-
-
 .start {
   display: flex;
   justify-content: center;
@@ -56,7 +51,8 @@ footer i {
   margin-top: 100px;
 }
 .home {
-  margin-top: 100px;
+  margin-top: 150px;
+  text-transform: uppercase;
 }
 
 .update {
@@ -97,6 +93,20 @@ text-align: center;
     flex-wrap: wrap;
   }
 
+  .fa-image {
+  font-size: 40px;
+
+}
+
+.fa-plus-square {
+  color: black;
+  font-size: 50px;
+}
+
+  .fa-user {
+  font-size: 35px;
+
+}
 
   .heart2 {
     color: 	red;
@@ -147,8 +157,8 @@ text-align: center;
 
 .profile-gallery {
   margin-left: 10px;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 
@@ -234,6 +244,7 @@ text-align: center;
   }
 
   p {
+  font-family: "Happy Monkey";
   font-size: 17px;
   text-transform: uppercase;
 }
@@ -277,6 +288,7 @@ text-align: center;
     transform: scale(1.1);
   }
   .post {
+
   color: black;
   font-size: 20px;
 
@@ -300,7 +312,6 @@ display: block;
 }
 
 .image-desc {
-
 border: 1px solid silver;
 margin-bottom: 10px;
 width: 80%;
@@ -324,21 +335,54 @@ height: 26px;
 }
 
 .profile-section {
-border-bottom: 1px solid black;
+border-bottom: 1px solid silver;
 width: 100%;
 
 }
 
 .gallery-page {
-border-bottom: 1px solid black;
+border-bottom: 1px solid silver;
 width: 100%;
 }
 
+.links {
+  display: flex;
+  justify-content: space-around;
+}
 .create-account {
+  background-color:#f1cbff;
+  margin-top: 50px;
+  color: black;
+  width: 120px;
+  margin-right: 10px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+}
+
+.start-login {
+  background-color:#f1cbff;
+  margin-top: 50px;
+  color: black;
+  height: 60px;
+  width: 120px;
+  line-height: 60px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+}
+
+.start-login a {
 text-decoration: none;
 color: black;
-display: flex;
-justify-content: space-around;
+}
+.create-account a {
+text-decoration: none;
+color: black;
 }
 
 .arrow {
@@ -351,5 +395,9 @@ font-size: 30px;
 
 .fa-arrow-left  {
 color: black;
+}
+
+.section {
+background-color: #202020;
 }
 }

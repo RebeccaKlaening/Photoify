@@ -12,9 +12,9 @@ require __DIR__.'/views/header.php'; ?>
     <?php endif; ?>
 
 <form action="/views/profile.php" method="post" enctype="multipart/form-data">
-
+    <p><?php echo $_SESSION['logedin']['username']; ?></p>
 </form><br>
-    <!-- <p class="profile-gallery"><b>User name: </b><br><br><?php echo $_SESSION['logedin']['username']; ?></p> -->
+
 </article>
 
 <?php require __DIR__.'/posts.php';
