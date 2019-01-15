@@ -1,19 +1,17 @@
 "use strict";
 
+let footer = document.getElementById("footer");
+let scrollBottom = document.body.scrollBottom || document.documentElement.scrollBottom;
+let lastScrollBottom = scrollBottom;
 
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 100
-  ) {
-    document.getElementById("footer").style.opacity = "1";
+window.addEventListener('scroll', function (){
+ scrollBottom = document.body.scrollBottom || document.documentElement.scrollBottom;
+  if(scrollBottom < lastScrollBottom) {
 
-    document.getElementById("footer").style.bottom = "0";
-
-  } else {
-    document.getElementById("footer").style.opacity = "0";
-
-    document.getElementById("footer").style.bottom = "-50px";
-
-  }
+    footer.style.bottom = "70px";
+}   else {
+    footer.style.bottom = "0";
 }
+  lastScrollBottom = scrollBottom;
+
+});

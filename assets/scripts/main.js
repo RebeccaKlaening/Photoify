@@ -13,6 +13,6 @@ document.getElementById('side-menu').style.width = '0';
 
 
 
-const popUp = document.getElementByClassName("pop-up");
-
-  popUp.classList.toggle("description-popup");
+// const popUp = document.getElementByClassName("pop-up");
+//
+//   popUp.classList.toggle("description-popup");

@@ -3,9 +3,182 @@
 body {
   font-family: "Raleway";
   background-color: 	#FFFAFA;
+}
+  .profile {
+    margin-left: 10px;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 6px -6px black;
 
+  }
+
+  .gallery-page {
+  border-bottom: 1px solid silver;
+  width: 100%;
+  }
+
+  .p-gallery {
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+  .profile-section {
+  margin-top: 100px;
+  border-bottom: 1px solid silver;
+  width: 100%;
+
+  }
+
+.profile-gallery {
+  margin-left: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.posts {
+display: flex;
+justify-content: center;
+}
+
+.post {
+color: black;
+font-size: 20px;
 
 }
+
+.image {
+  margin-top: 20px;
+  align-items: center;
+  width: 530px;
+  height: 530px;
+  object-fit: cover;
+  transform: scale(1);
+  transition: 0.2s ease;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.image:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.hamburger-btn {
+  line-height: 50px;
+  font-size: 35px;
+  cursor: pointer;
+  list-style: none;
+
+}
+
+.hamburger-btn:hover {
+  color: #fff;
+  transition: 0.3s;
+
+}
+
+.fa-image {
+font-size: 35px;
+}
+
+.fa-image:hover {
+color: #fff;
+}
+
+.fa-plus-square {
+  color: black;
+  font-size: 50px;
+}
+
+.fa-plus-square:hover {
+color: #fff;
+}
+
+.fa-user {
+font-size: 35px;
+
+}
+
+.fa-user:hover {
+color: #fff;
+
+}
+
+.profile-btn {
+  background-color:#f1cbff;
+  color: black;
+  padding: 15px 32px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+.profile-btn a {
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.pop-up {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-top: 150px;
+}
+
+
+.post-edit {
+  transform: translateX(-300px);
+}
+
+.slide-edit {
+  transform: translateX(460px);
+  display: block;
+  width: 250px;
+  height: 160px;
+  transition: ease-in-out;
+  transition: 0.5s;
+  box-shadow: 0 8px 6px -6px black;
+  background-color: #f1cbff;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.fa-edit {
+  margin-bottom: 10px;
+  font-size: 40px;
+  cursor: pointer;
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.heart2 {
+  color: 	red;
+  font-size: 30px;
+  cursor: pointer;
+  border: none;
+
+}
+
+.form-heart {
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+
 
 h2 {
   text-transform: uppercase;
@@ -18,6 +191,13 @@ article h1 {
   font-size: 40px;
   text-align: center;
 
+}
+
+h1 {
+  font-family: "Happy Monkey";
+  color: pink;
+  font-size: 40px;
+  text-align: center;
 }
 
 footer {
@@ -86,7 +266,7 @@ text-align: center;
 
   .fa-edit {
     margin-left: 10px;
-    font-size: 30px;
+    font-size: 40px;
     cursor: pointer;
     display:flex;
     justify-content: flex-start;
@@ -103,6 +283,7 @@ text-align: center;
   font-size: 50px;
 }
 
+
   .fa-user {
   font-size: 35px;
 
@@ -110,12 +291,18 @@ text-align: center;
 
   .heart2 {
     color: 	red;
-    font-size: 30px;
+    font-size: 40px;
     cursor: pointer;
-    /* visibility: hidden; */
-    /* position: absolute; */
-
+    background-color: #FFFAFA;
   }
+
+  .form-heart {
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
 
   .edit {
   height: 30px;
@@ -123,7 +310,6 @@ text-align: center;
   font-size: 20px;
 
 }
-
 
 .form-control {
   width: 60%;
@@ -147,7 +333,7 @@ text-align: center;
 
   }
 
-}
+
 .container-profile {
   display: block;
   margin-top: 80px;
@@ -180,8 +366,6 @@ text-align: center;
   margin-top: 100px;
 }
 
-
-@media screen and (max-width: 600px) {
 
   .hamburger-btn {
     line-height: 30px;
@@ -275,7 +459,6 @@ text-align: center;
 }
 
   .image {
-    margin-left: 15px;
     width: 330px;
     height: 330px;
     object-fit: cover;
@@ -307,10 +490,6 @@ flex-direction: column;
 margin-top: 150px;
 }
 
-.description-popup {
-display: block;
-}
-
 .image-desc {
 border: 1px solid silver;
 margin-bottom: 10px;
@@ -335,6 +514,7 @@ height: 26px;
 }
 
 .profile-section {
+margin-top: 100px;
 border-bottom: 1px solid silver;
 width: 100%;
 
