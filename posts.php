@@ -10,14 +10,12 @@
 
 
         <form class="form-heart" action="app/posts/likes.php"  method="post" enctype="multipart/form-data">
-            <input type="text" style="display:none" hidden name="post_id" value="<?= $post['id']?>">
+            <input type="hidden" name="post_id" value="<?= $post['id']?>">
+            <button id ="heart2-js" class="heart2" type="submit" name="likes_add" onclick ="myFunction()"value="">
             <div class="form-group">
-                <label for="likes_add"></label>
+                <i class="fas fa-heart"></i>
+                <p class="p-heart"><?php echo $post['likes']?><p></button>
             </div>
-
-            <button id ="heart2-js" class="heart2" name="likes_add" onclick ="myFunction()"value=""><i class="fas fa-heart"></i>
-                <?php echo $post['likes']?></button>
-
     </form>
 
 

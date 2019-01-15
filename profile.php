@@ -46,7 +46,7 @@ if(isset($_SESSION['message'])) {
 
     </div> <br>
 </form>
-        <button class="profile-btn" type="submit"><a class="" href="/update.php">Update Bio</a></button><br><br><br>
+        <button class="profile-btn" type="submit"><a class="" href="/update.php">Update Bio</a></button><br><br><br><br>
         <!-- <button class="profile-btn" type="submit"><a class="" href="/gallery.php">Go to gallery</a></button><br><br><br> -->
 </div>
 

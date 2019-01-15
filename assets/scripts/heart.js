@@ -1,21 +1,4 @@
 'use strict';
-//
-// function hearts() {
-//   document.getElementById("heart-js").style.color = "red";
-//
-// }
-//
-// function hearts() {
-//   document.getElementById("heart2-js").style.color = "red";
-// }
-
-function myFunction() {
-  let element = document.getElementById("heart2-js");
-   element.classList.toggle("heart2");
-}
-
-
-
 
 // post button change comment or delete posts
 const posts = [...document.querySelectorAll(".change-post")];

@@ -1,18 +1,24 @@
 'use strict';
 
-function openSlideMenu() {
-document.getElementById('side-menu').style.width = '250px';
+
+const formHeart = document.querySelectorAll(".form-heart");
+
+formHeart.forEach(form => {
+
+  form.addEventListener("submit", event => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
 
 
-}
 
-function closeSlideMenu() {
-document.getElementById('side-menu').style.width = '0';
-}
+      fetch("app/posts/likes.php", {
+        method: "POST",
+        body: formData
+      })
 
+        .then(response => response.json())
 
-
-
-// const popUp = document.getElementByClassName("pop-up");
-//
-//   popUp.classList.toggle("description-popup");
+        .then(json => form[1].children[0].children[1].textContent = json);
+      });
+    });

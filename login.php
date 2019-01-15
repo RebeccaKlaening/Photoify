@@ -4,7 +4,7 @@
 
 <article class="create-login">
 
-    <h1 class="h1-login">Login</h1>
+    <h1 class="create">Login</h1>
     <form class ="login" action="app/users/login.php" method="post"><br>
             <label for="username">Username</label> <br><br>
             <input class="input" type="username" name="username" placeholder="Username" required>
@@ -19,6 +19,7 @@
         <button type="submit" class="profile-btn">Login</button>
 
     </form>
+
 </article>
 
 <div class="arrow">

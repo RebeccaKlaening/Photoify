@@ -1,6 +1,7 @@
  <script type="text/javascript" src="/assets/scripts/navbar.js"></script>
  <script type="text/javascript" src="/assets/scripts/heart.js"></script>
-<script type="text/javascript" src="/assets/scripts/footer.js"></script>
+<!-- <script type="text/javascript" src="/assets/scripts/footer.js"></script> -->
+<script type="text/javascript" src="/assets/scripts/sidebar.js"></script>
 <script src="/assets/scripts/main.js"></script>
 
 <?php if(isset($_SESSION['user'])): ?>
