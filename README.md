@@ -21,15 +21,15 @@ The Assigment
 * As a user I should be able to like and dislike posts.
 
 
-
+**How To Use**
 Clone/download repository github.com/RebeccaKlaening/Photoify.git from GitHub
 Download/open MAMP
 Go to Preferences in MAMP and set Web Server to the folder you just downloaded
 Press "Start Servers" in MAMP
 Open the index.php-file by typing localhost:8888 in your browser
 
-Tested by
+**Tested by**
 
 
-License
-MIT
+**License** 
+- MIT
