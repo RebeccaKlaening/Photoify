@@ -22,6 +22,7 @@ The Assigment
 
 
 **How To Use**
+
 Clone/download repository github.com/RebeccaKlaening/Photoify.git from GitHub
 Download/open MAMP
 Go to Preferences in MAMP and set Web Server to the folder you just downloaded
