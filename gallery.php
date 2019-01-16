@@ -23,7 +23,7 @@ require __DIR__.'/views/header.php'; ?>
     <br><section>
         <div class="posts">
             <img class="profile-user" src="/views/img/<?= $allPost['profile_pic']?>" alt=""></div>
-            <h3 class="h3-user"><?= $allPost['username']?></h3>
+            <h3 class="h3-user"><?= $allPost['username']?> post:</h3>
             <!-- want to  put everys profile pic over the pi -->
             <img class="image" src="app/posts/upload-posts/<?= $allPost['content'] ?>" alt="">
             <h2 class ="description"><?= $allPost['description']?></h2>

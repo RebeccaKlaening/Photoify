@@ -185,10 +185,17 @@ justify-content: center;
 }
 
 .heart2 {
+  background-color: 	#FFFAFA;
   color: 	red;
   font-size: 30px;
   cursor: pointer;
   border: none;
+
+
+}
+
+.heart2:focus {
+outline-width: 0;
 
 }
 
@@ -321,6 +328,7 @@ footer i {
 }
 
 .welcome {
+  font-family: "Raleway"
   text-align: center;
 }
 
@@ -361,7 +369,9 @@ justify-content: center;
 }
 
 .profile-posts {
-display: block;
+/* display: block; */
+height: 100vh;
+
 }
 
 .user {

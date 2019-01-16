@@ -1,5 +1,5 @@
 <article class="profile-posts">
-        <h1 class="my-posts">My Posts</h1>
+<h1 class="my-posts">My Posts</h1>
     <?php $posts = getPosts($_SESSION['user']['id'], $pdo);
     foreach($posts as $post): ?>
 <br><section>

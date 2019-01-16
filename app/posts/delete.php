@@ -24,5 +24,5 @@ $_SESSION['posts'] = [
     'created_at' => $created,
 ];
 
-redirect('/gallery.php');
+redirect('/profile.php');
 }

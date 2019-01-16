@@ -53,4 +53,4 @@ $_SESSION['posts'] = [
 ];
 };
 
-redirect('/gallery.php');
+redirect('/profile.php');
