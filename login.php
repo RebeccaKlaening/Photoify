@@ -11,13 +11,13 @@
 
         <div><br>
             <label for="password">Password</label> <br><br>
-            <input class="input" type="password" name="password" required>
+            <input class="input" type="password" name="password" placeholder="Password"required>
 
         </div><!-- /form-group -->
         <br>
-
+        <div class="btn-place">
         <button type="submit" class="profile-btn">Login</button>
-
+        </div>
     </form>
 
 </article>

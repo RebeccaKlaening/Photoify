@@ -37,7 +37,7 @@ if(isset($_SESSION['message'])) {
 </article>
 <div class="bio">
     <form action="/app/users/bio.php" method="post" enctype="multipart/form-data">
-        <div class="bio">
+        <div class="user">
             <p><b>User name: </b><br><br><?php echo $_SESSION['logedin']['username']; ?></p>
 
             <p><b>Say something about yourself:</b><br><br> <?php echo $_SESSION['logedin']['profile_bio']; ?></p>
@@ -50,4 +50,5 @@ if(isset($_SESSION['message'])) {
         <!-- <button class="profile-btn" type="submit"><a class="" href="/gallery.php">Go to gallery</a></button><br><br><br> -->
 </div>
 
-<?php require __DIR__.'/views/footer.php'; ?>
+<?php require __DIR__.'/posts.php';
+ require __DIR__.'/views/footer.php'; ?>

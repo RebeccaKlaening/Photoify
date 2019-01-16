@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 require __DIR__.'/views/header.php';
+
+if(isset($_SESSION['message'])) {
+    echo ($_SESSION['message'][0]);
+    unset($_SESSION['message']);
+}
 ?>
 
 
@@ -33,8 +38,9 @@ require __DIR__.'/views/header.php';
         </div><!-- /form-group -->
         <br>
 
+        <div class="btn-place">
         <button class ="profile-btn " type="submit" class="btn btn-primary">Create Account</button>
-
+        </div>
     </form>
 
 </article>

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Happy+Monkey');
 
 body {
+  height: 100vh;
+  width: 100vw;
   margin: 0;
   padding: 0;
   font-family: "Raleway";
@@ -35,6 +37,7 @@ body {
 }
 
 .profile-gallery {
+  margin-top: 100px;
   margin-left: 20px;
   width: 150px;
   height: 150px;
@@ -42,10 +45,20 @@ body {
   object-fit: cover;
   box-shadow: 0 8px 6px -6px black;
 }
+.profile-user {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.posts-display {
+display: flex;
+justify-content: center;
+}
 
 .posts {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .post {
@@ -111,6 +124,11 @@ body {
 
 }
 
+.btn-place {
+  display: flex;
+  justify-content: center;
+}
+
 .profile-btn {
   margin-left: 20px;
   background-color:#f1cbff;
@@ -143,7 +161,7 @@ body {
 }
 
 .slide-edit {
-  transform: translateX(430px);
+  transform: translateX(590px);
   display: block;
   width: 250px;
   height: 160px;
@@ -183,8 +201,13 @@ body {
 
 .bio {
   margin-left: 10px;
+  border-bottom: 1px solid silver;
 }
 
+p {
+font-family: "Happy Monkey";
+font-size: 20px;
+}
 
 
 h2 {
@@ -269,7 +292,7 @@ footer i {
 
 .arrow {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   color: black;
   margin-left: 30px;
   font-size: 30px;
@@ -287,9 +310,7 @@ footer i {
 .create {
   margin-top: 100px;
 }
-.gallery {
-  margin-top: 100px;
-}
+
 .home {
   margin-top: 150px;
   text-transform: uppercase;
@@ -313,6 +334,7 @@ footer i {
 .create-login {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 
 }
@@ -331,4 +353,30 @@ footer i {
   /* font-size: 17px; */
   width: 180px;
   /* height: 26px;  */
+}
+
+.getAllPosts {
+display: flex;
+justify-content: center;
+}
+
+.profile-posts {
+display: block;
+}
+
+.user {
+margin-left: 20px;
+}
+
+.h3-user {
+text-transform: uppercase;
+font-size: 20px;
+font-family: "Happy Monkey";
+text-align:left;
+}
+
+.desc {
+text-align: center;
+font-family: "Happy Monkey";
+font-size: 17px;
 }

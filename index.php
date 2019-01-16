@@ -2,20 +2,7 @@
 declare(strict_types=1);
 require __DIR__.'/views/header.php';
 
-
-if(!isset($_SESSION['logedin'])) {
-    redirect('/index.php');
-}
-
-
-if(isset($_SESSION['message'])) {
-    echo ($_SESSION['message'][0]);
-    unset($_SESSION['message']);
-}
-
 ?>
-
-<section class="index">
 
 <article class="start">
     <h1 class="home">Photoify</h1>
@@ -30,5 +17,5 @@ if(isset($_SESSION['message'])) {
         <a class="nav-item" <?php echo $_SERVER['SCRIPT_NAME'] === '/login.php' ? 'active' : ''; ?> href="login.php">Login</a>
     </div>
 </div>
-</section>
+
 <?php require __DIR__.'/views/footer.php'; ?>

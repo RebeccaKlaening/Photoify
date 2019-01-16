@@ -28,5 +28,14 @@ function getPosts(INT $id, $pdo) {
 }
 
 
+function getAllPosts($pdo) {
+
+  $statement = $pdo->prepare('SELECT a.*, b.username, b.profile_pic FROM posts a LEFT JOIN users b ON a.user_id=b.id ORDER BY created_at DESC');
+  $statement->execute();
+  $allPosts = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+return $allPosts;
+
+  }
 
 ?>
