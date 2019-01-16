@@ -38,7 +38,7 @@ if ($postImage['type'] !== 'image/jpeg') {
 
  $statement->execute();
 ;
-//bilden ska läggas i upload image mappen(användarens id, datumet den laddades upp och vilken typ)
+
  move_uploaded_file($postImage['tmp_name'], __DIR__.'/upload-posts/'. $content);
 
 

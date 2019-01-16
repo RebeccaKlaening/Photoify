@@ -21,8 +21,8 @@ require __DIR__.'/views/header.php'; ?>
     <?php $allPosts = getAllPosts($pdo);
     foreach($allPosts as $allPost): ?>
     <br><section>
-        <div class="posts">
-            <img class="profile-user" src="/views/img/<?= $allPost['profile_pic']?>" alt=""></div>
+
+            <img class="profile-user" src="/views/img/<?= $allPost['profile_pic']?>" alt="">
             <h3 class="h3-user"><?= $allPost['username']?> post:</h3>
             <!-- want to  put everys profile pic over the pi -->
             <img class="image" src="app/posts/upload-posts/<?= $allPost['content'] ?>" alt="">
@@ -34,12 +34,11 @@ require __DIR__.'/views/header.php'; ?>
                 <button id ="heart2-js" class="heart2" type="submit" name="likes_add"value="">
                     <div class="form-group">
                         <i class="fas fa-heart"></i>
-                        <p class="p-heart" data-id="<?= $post['id'] ?>"><?php echo $allPost['likes']?><p></button><br>
+                        <p class="p-heart" data-id="<?= $post['id'] ?>"><?php echo $allPost['likes']?><p></button>
 
                         </div>
                     </form>
                 <?php endforeach; ?>
-
             </article>
 
             <?php require __DIR__.'/views/footer.php'; ?>

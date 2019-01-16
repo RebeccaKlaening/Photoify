@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 require __DIR__.'/../autoload.php';
-// In this file we delete posts in the database.
+
 if(isset($_POST['post_description'], $_POST['post_id'])){
 
   $description  = trim(filter_var($_POST['post_description'], FILTER_SANITIZE_STRING));
