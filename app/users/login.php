@@ -21,8 +21,6 @@ if (isset($_POST['username'], $_POST['password'])) {
         unset($user['password']);
         $_SESSION['user'] = $user;
 
-        $_SESSION['message'][] = "Logged in ok!";
-
         $_SESSION['logedin'] = [
             'id' => $user['id'],
             'email' => $user['email'],
