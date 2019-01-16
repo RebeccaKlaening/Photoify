@@ -32,7 +32,8 @@
 * Open the index.php-file by typing localhost:8888 in your browser
 
 ## Tested by
-
+Charmaine Wang
+Lovisa Hallgren
 
 ## License
 - MIT
