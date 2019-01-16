@@ -340,7 +340,7 @@ footer i {
 }
 
 .input {
-  font-family: "Raleway";
+  font-family: "Happy Monkey";
   border: 1px solid silver;
   text-align: center;
   font-size: 15px;
@@ -379,4 +379,13 @@ text-align:left;
 text-align: center;
 font-family: "Happy Monkey";
 font-size: 17px;
+}
+
+.edit-bio {
+  font-family: "Happy Monkey";
+  text-align: center;
+  width: 250px;
+  font-size: 15px;
+  height: 80px;
+  border: 1px solid silver;
 }

@@ -7,7 +7,7 @@ require __DIR__.'/views/header.php';
 <article class="update">
     <h1>Update Account</h1>
 
-    <form class ="login" action="app/posts/update.php" method="post">
+    <form class ="create-login" action="app/posts/update.php" method="post">
         <div class="update-form">
             <label class="label" for="username">User Name</label><br>
             <input class="input" type="text" name="username" placeholder="User Name" value="<?= $_SESSION['user']['username']?>">
@@ -37,7 +37,7 @@ require __DIR__.'/views/header.php';
             <br>
 
         <div class="update-form">
-            <label class="label" for="password">Old Password</label><br>
+            <label class="label" for="password">Confirm with old password</label><br>
             <input class="input" type="password" name="password" placeholder="Old password" required>
             <!-- <small class="form-text text-muted"></small> -->
         </div><!-- /form-group -->
