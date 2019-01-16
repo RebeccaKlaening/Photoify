@@ -11,7 +11,7 @@ if(isset($_FILES['content'], $_POST['description'])) {
 $postImage = $_FILES['content'];
 $description = trim(filter_var($_POST['description'], FILTER_SANITIZE_STRING));
 $created = date('Y-m-d-H-i-s');
-$id = (int) $_SESSION['logedin']['id']; //vad ska man kolla ????
+$id = (int) $_SESSION['logedin']['id'];
 $extension = pathinfo($_FILES['content']['name'])['extension'];
 
 

@@ -65,8 +65,8 @@ justify-content: center;
 .image {
   margin-top: 20px;
   align-items: center;
-  width: 530px;
-  height: 530px;
+  width: 430px;
+  height: 430px;
   object-fit: cover;
   transform: scale(1);
   transition: 0.2s ease;

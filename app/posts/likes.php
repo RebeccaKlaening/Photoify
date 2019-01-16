@@ -1,9 +1,7 @@
 <?php
 declare(strict_types=1);
 require __DIR__.'/../autoload.php';
-// check if user has already liked the post
-// if user has liked the post, remove the like from the likes table and decrement total on post by 1
-// if user has not liked the post, add like to the likes table and increment total on post by 1
+
 if(isset($_POST['post_id'])){
 
 
