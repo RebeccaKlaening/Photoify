@@ -13,7 +13,7 @@ if (isset($_POST['username'], $_POST['password'])) {
 
     if (!$user) {
         $_SESSION['message'][] = "User with that email does not exist!";
-        redirect('/');
+        redirect('/login.php');
     }
 
     if (password_verify($_POST['password'], $user['password'])) {
@@ -38,6 +38,3 @@ if (isset($_POST['username'], $_POST['password'])) {
     }
 
 }
-
-
-redirect('/');

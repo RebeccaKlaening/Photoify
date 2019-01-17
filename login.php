@@ -1,5 +1,10 @@
-<?php require __DIR__.'/views/header.php'; ?>
+<?php require __DIR__.'/views/header.php';
 
+if(isset($_SESSION['message'])) {
+    echo ($_SESSION['message'][0]);
+    unset($_SESSION['message']);
+}
+?>
 
 
 <article class="create-login">
