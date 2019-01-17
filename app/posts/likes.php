@@ -35,9 +35,9 @@ $currentLikes = (int)$currentLikes['likes'];
        $statement = $pdo->prepare('UPDATE posts SET likes = :likes WHERE id = :id');
        $statement->bindParam(':id', $postId, PDO::PARAM_INT);
 
-       $hej = $currentLikes + 1;
+       $number = $currentLikes + 1;
 
-       $statement->bindParam(':likes', $hej, PDO::PARAM_INT);
+       $statement->bindParam(':likes', $number, PDO::PARAM_INT);
        $statement->execute();
 
 
@@ -54,9 +54,9 @@ $currentLikes = (int)$currentLikes['likes'];
 
   $statement->bindParam(':id', $postId, PDO::PARAM_INT);
 
-  $hej = $currentLikes - 1;
+  $number = $currentLikes - 1;
 
-  $statement->bindParam(':likes', $hej, PDO::PARAM_INT);
+  $statement->bindParam(':likes', $number, PDO::PARAM_INT);
   $statement->execute();
  }
     $statement = $pdo->prepare('SELECT likes FROM posts WHERE id = :id');
