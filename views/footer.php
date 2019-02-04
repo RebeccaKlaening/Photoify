@@ -4,7 +4,7 @@
 <script type="text/javascript" src="/assets/scripts/sidebar.js"></script>
 <script src="/assets/scripts/main.js"></script>
 
-<?php if(isset($_SESSION['user'])): ?>
+<?php if (isset($_SESSION['user'])): ?>
 <footer id="footer">
 <!-- <i class="fab fa-facebook-square"></i> -->
     <a class="" href="/profile.php"><i class="far fa-user"></i></a>

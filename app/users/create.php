@@ -2,8 +2,7 @@
 declare(strict_types=1);
 require __DIR__.'/../autoload.php';
 
-if(isset($_POST['email'], $_POST['password'], $_POST['username'], $_POST['name'])) {
-
+if (isset($_POST['email'], $_POST['password'], $_POST['username'], $_POST['name'])) {
     $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
     $password = password_hash(trim($_POST['password']), PASSWORD_DEFAULT);
     $userName = filter_var(trim($_POST['username']), FILTER_SANITIZE_STRING);
@@ -13,8 +12,8 @@ if(isset($_POST['email'], $_POST['password'], $_POST['username'], $_POST['name']
 
     $statement = $pdo->prepare('INSERT INTO users (email, password, username, name) VALUES (:email, :password, :username, :name)');
 
-    if(!$statement) {
-      die(var_dump($pdo->errorInfo()));
+    if (!$statement) {
+        die(var_dump($pdo->errorInfo()));
     }
 
     $statement->bindParam(':email', $email, PDO::PARAM_STR);

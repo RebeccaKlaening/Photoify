@@ -19,7 +19,7 @@ require __DIR__.'/views/header.php'; ?>
 <article class="getAllPosts">
 
     <?php $allPosts = getAllPosts($pdo);
-    foreach($allPosts as $allPost): ?>
+    foreach ($allPosts as $allPost): ?>
     <br><section>
 
             <img class="profile-user" src="/views/img/<?= $allPost['profile_pic']?>" alt="">

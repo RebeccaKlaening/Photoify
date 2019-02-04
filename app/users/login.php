@@ -17,7 +17,6 @@ if (isset($_POST['username'], $_POST['password'])) {
     }
 
     if (password_verify($_POST['password'], $user['password'])) {
-
         unset($user['password']);
         $_SESSION['user'] = $user;
 
@@ -31,10 +30,8 @@ if (isset($_POST['username'], $_POST['password'])) {
             'username' => $user['username'],
         ];
         redirect('/profile.php');
-
     } else {
         $_SESSION['message'][] = "Wrong password!";
         redirect('/login.php');
     }
-
 }

@@ -1,7 +1,7 @@
 <article class="profile-posts">
 <h1 class="my-posts">My Posts</h1>
     <?php $posts = getPosts($_SESSION['user']['id'], $pdo);
-    foreach($posts as $post): ?>
+    foreach ($posts as $post): ?>
 <br><section>
 <div class="posts-display">
    <img src="<?='/app/posts/upload-posts/'. $post['content'];?>" class="image"></div></section>
