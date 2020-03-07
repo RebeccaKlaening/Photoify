@@ -9,6 +9,6 @@ posts.forEach(post => {
    const id = event.target.dataset.id;
    const postEdit = document.querySelector(`.post-edit[data-id="${id}"]`);
    postEdit.classList.toggle('slide-edit')
-   // postEdit.classList.add('.slide-edit');
+
  });
 });

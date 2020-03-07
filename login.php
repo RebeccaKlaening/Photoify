@@ -6,13 +6,12 @@ if (isset($_SESSION['message'])) {
 }
 ?>
 
-
 <article class="create-login">
 
     <h1 class="create">Login</h1>
     <form class ="login" action="app/users/login.php" method="post"><br>
-            <label for="username">Username</label> <br><br>
-            <input class="input" type="username" name="username" placeholder="Username" required>
+        <label for="username">Username</label><br><br>
+        <input class="input" type="username" name="username" placeholder="Username" required>
 
         <div><br>
             <label for="password">Password</label> <br><br>

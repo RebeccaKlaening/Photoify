@@ -6,6 +6,7 @@ require __DIR__.'/../autoload.php';
 
 if (!isset($_SESSION['user'])) {
     redirect('/profile.php');
+
 } else {
     $id = $_SESSION['user']['id'];
 
@@ -45,7 +46,6 @@ if (!isset($_SESSION['user'])) {
         $_SESSION['messages'][] = "Your bio has been updated!";
     }
 
-
     // name update
     if (isset($_POST['name']) && $_POST['name'] !== $_SESSION['user']['name']) {
         $name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
@@ -69,12 +69,7 @@ if (!isset($_SESSION['user'])) {
         $_SESSION['messages'][] = "Your email has been updated!";
     }
 
-
-
-
     // If password update was posted
-
-
     if (isset($_POST['newPassword'], $_POST['password']) && $_POST['password'] !== "") {
         if ($_POST['newPassword'] === $_POST['password'] && $_POST['password'] === "") {
             $_SESSION['error']['message'] = "You cannot use the same password again!";
@@ -95,7 +90,6 @@ if (!isset($_SESSION['user'])) {
                 $_SESSION['messages'][] = "Your password has been updated!";
             }
         }
-
 
         $statement = $pdo->prepare('SELECT * FROM users WHERE id = :id');
         $statement->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_INT);

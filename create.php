@@ -10,7 +10,7 @@ if (isset($_SESSION['message'])) {
 
 
 <article class="create-login">
-<h1 class="create">Create Account</h1>
+    <h1 class="create">Create Account</h1>
 
     <form class ="login" action="app/users/create.php" method="post">
         <div class="form-group"><br>
@@ -44,6 +44,7 @@ if (isset($_SESSION['message'])) {
     </form>
 
 </article>
+
 <div class="arrow">
     <a class="" href="/index.php"><i class="fas fa-arrow-left"></i></a>
 </div>

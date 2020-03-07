@@ -4,7 +4,7 @@ let footer = document.getElementById("footer");
 let scrollBottom = document.body.scrollBottom || document.documentElement.scrollBottom;
 let lastScrollBottom = scrollBottom;
 
-window.addEventListener('scroll', function (){
+window.addEventListener('scroll', function () {
  scrollBottom = document.body.scrollBottom || document.documentElement.scrollBottom;
   if(scrollBottom < lastScrollBottom) {
 

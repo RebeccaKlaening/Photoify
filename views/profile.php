@@ -4,8 +4,6 @@ require __DIR__.'/../app/autoload.php';
 
 $userId = $_SESSION['user']['id'];
 
-
-
 $errors = [];
 
 if (isset($_FILES['profile_pic'])) {

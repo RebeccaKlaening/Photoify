@@ -1,6 +1,5 @@
 'use strict';
 
-
 const formHeart = document.querySelectorAll(".form-heart");
 
 formHeart.forEach(form => {
@@ -9,8 +8,6 @@ formHeart.forEach(form => {
     event.preventDefault();
 
     const formData = new FormData(form);
-
-
 
       fetch("app/posts/likes.php", {
         method: "POST",
@@ -21,4 +18,4 @@ formHeart.forEach(form => {
 
         .then(json => form[1].children[0].children[1].textContent = json);
       });
-    });
+  });
